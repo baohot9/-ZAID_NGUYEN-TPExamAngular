@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
   password: string;
   tmp: any = comptes;
   tmp_object: any = null;
+  ecran: string
 
   constructor(private router: Router, ) { }
 
@@ -32,7 +33,6 @@ export class LoginComponent implements OnInit {
       this.logout = true; 
       if(this.tmp_object.ecran == "Admin"){
         localStorage.setItem("token", "haskdjheakjfaejkfbjaf");
-        console.log(this.tmp_object.ecran);
       } else if(this.tmp_object.ecran == "Chef de Projet"){
         localStorage.setItem("token", "queryiqeryiereruqer");
       } else if(this.tmp_object.ecran == "Salarié"){
@@ -48,9 +48,25 @@ export class LoginComponent implements OnInit {
     
   }
 
-  ngOnInit() {
-    // tam
+  logoutFunction(){
     localStorage.setItem("token", null);
+      this.logout = false;
+  }
+
+  ngOnInit() {
+    let tmp = localStorage.getItem('token');
+    this.logout = true;
+
+    if (tmp === 'haskdjheakjfaejkfbjaf') {
+        this.ecran = "Admin"; 
+    }else if (tmp === 'queryiqeryiereruqer') {
+        this.ecran = "Chef de Projet"; 
+    }else if (tmp === 'ewrwerwerwrwerwfdfgf') {
+        this.ecran = "Salarié"; 
+    } else {
+      localStorage.setItem("token", null);
+      this.logout = false;
+    }
   }
 
 }

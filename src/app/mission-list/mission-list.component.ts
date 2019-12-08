@@ -41,7 +41,7 @@ export class PubliqueComponent implements OnInit {
   domain: string;
   flag_edit: boolean;
 
-  login: boolean = false;
+  admin_chef: boolean = false;
 
   constructor(
     private router: Router, public dialog: MatDialog
@@ -53,8 +53,8 @@ export class PubliqueComponent implements OnInit {
   }
   ngOnInit() {
     let tmp = localStorage.getItem('token');
-    if (tmp === 'haskdjheakjfaejkfbjaf') {
-      this.login = true;
+    if (tmp === 'haskdjheakjfaejkfbjaf' || tmp === 'queryiqeryiereruqer') {
+      this.admin_chef = true;
     }
   }
 

@@ -21,5 +21,6 @@
 </div>
 
 <div style="text-align:center" *ngIf="logout">
-    <h1> Ecran: {{tmp_object.Ecran}} </h1>
+    <h1> Ecran: {{ecran}} </h1>
+    <button (click)="logoutFunction()" mat-raised-button>Log out</button>
 </div>

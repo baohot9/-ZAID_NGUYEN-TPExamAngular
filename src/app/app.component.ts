@@ -36,7 +36,4 @@ export class AppComponent {
   login_go() {
     this.router.navigate(['/login']);
   }
-  logout_go() {
-    this.router.navigate(['/logout']);
-  }
 }
