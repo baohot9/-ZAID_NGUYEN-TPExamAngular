@@ -1,0 +1,25 @@
+.table-custom {
+    display: inline-block;
+    width: 800px;
+}
+.th-custom{
+    width: 200px;
+}
+
+.example-container {
+  display: inline-block;
+  flex-direction: column;
+}
+
+.example-container > * {
+  display: inline-block;
+  width: 100%;
+}
+
+.example-container > .mat-form-field {
+  width: inherit;
+}
+
+.mat-custom {
+  width: 100%!important;
+}

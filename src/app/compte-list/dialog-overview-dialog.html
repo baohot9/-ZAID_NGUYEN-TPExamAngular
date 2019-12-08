@@ -1,0 +1,31 @@
+<h1 mat-dialog-title>New Compte</h1>
+<div mat-dialog-content>
+    <div class="example-container">
+        <mat-form-field class="mat-custom" *ngIf="!data.flag_edit">
+            <input matInput placeholder="Id" [(ngModel)]="data.id" >
+        </mat-form-field>
+
+        <mat-form-field class="mat-custom">
+            <input matInput placeholder="Nom" [(ngModel)]="data.nom">
+        </mat-form-field>
+
+        <mat-form-field class="mat-custom">
+            <input matInput placeholder="Password" [(ngModel)]="data.pw">
+        </mat-form-field>
+
+        <mat-form-field class="mat-custom">
+            <mat-label>Ecran</mat-label>
+            <mat-select [(value)]="data.ecran">
+                <mat-option>None</mat-option>
+                <mat-option value="Admin">Admin</mat-option>
+                <mat-option value="Chef du projet">Chef du projet</mat-option>
+                <mat-option value="Salarié">Salarié</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+</div>

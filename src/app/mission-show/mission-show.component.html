@@ -1,0 +1,32 @@
+<p></p>
+<div  style="text-align:center">
+<mat-card class="table-custom" style="text-align:center">
+    <h1>{{mission.nom}}</h1>
+    <mat-list>
+
+        <mat-list-item>Nom du client: {{mission.client}}</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>Ville: {{mission.ville}}</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>Département: {{mission.departement}}</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>Année de début de la mission: {{mission.annee_debut}}</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>Année de fin de la mission: {{mission.annee_fin}}</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>Montant des prestations: {{mission.montant}}</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>Détail des prestations: {{mission.detail}}</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>Image d’illustration représentative de la mission: {{mission.image}}</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>Domaines techniques: {{mission.domain}}</mat-list-item>
+        <mat-divider></mat-divider>
+
+    </mat-list>
+</mat-card>
+
+<p></p>
+
+<button (click)="back()" mat-raised-button>Back</button>
+</div>

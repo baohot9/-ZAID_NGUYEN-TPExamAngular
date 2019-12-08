@@ -1,0 +1,25 @@
+<p></p>
+<div style="text-align:center" *ngIf="!logout">
+    <mat-card class="table-custom" style="text-align:center">
+        <h1>Log in </h1>
+
+        <mat-form-field appearance="outline" class="mat-custom">
+            <input matInput placeholder="Nom" [(ngModel)]="name">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="mat-custom">
+            <input matInput placeholder="Password" [(ngModel)]="pw">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+
+    </mat-card>
+
+    <p></p>
+
+    <button (click)="login(name, pw)" mat-raised-button>Login</button>
+</div>
+
+<div style="text-align:center" *ngIf="logout">
+    <h1> Ecran: {{tmp_object.Ecran}} </h1>
+</div>

@@ -1,0 +1,63 @@
+<h1 mat-dialog-title>New Mission</h1>
+<div mat-dialog-content>
+    <div class="example-container">
+        <mat-form-field class="mat-custom" *ngIf="!data.flag_edit">
+            <input matInput placeholder="Id" [(ngModel)]="data.id" >
+        </mat-form-field>
+
+        <mat-form-field class="mat-custom">
+            <input matInput placeholder="Nom de la mission" [(ngModel)]="data.nom" >
+        </mat-form-field>
+
+        <mat-form-field class="mat-custom">
+            <input matInput placeholder="Nom u client" [(ngModel)]="data.client">
+        </mat-form-field>
+
+        <mat-form-field class="mat-custom">
+            <input matInput placeholder="Ville" [(ngModel)]="data.ville">
+        </mat-form-field>
+
+        <mat-form-field class="mat-custom">
+            <input matInput placeholder="Département" [(ngModel)]="data.departement">
+        </mat-form-field>
+
+        <mat-form-field class="mat-custom">
+            <input matInput placeholder="Année de début de la mission" [(ngModel)]="data.annee_debut">
+        </mat-form-field>
+
+        <mat-form-field class="mat-custom">
+            <input matInput placeholder="Année de fin de la mission" [(ngModel)]="data.annee_fin">
+        </mat-form-field>
+
+        <mat-form-field class="mat-custom">
+            <input matInput placeholder="Montant des prestations" [(ngModel)]="data.montant">
+        </mat-form-field>
+
+        <mat-form-field class="mat-custom">
+            <input matInput placeholder="Détail des prestations:" [(ngModel)]="data.detail">
+        </mat-form-field>
+
+        <mat-form-field class="mat-custom">
+            <input matInput placeholder="Image d’illustration représentative de la mission" [(ngModel)]="data.image">
+        </mat-form-field>
+
+        <mat-form-field class="mat-custom">
+            <mat-label>Ecran</mat-label>
+            <mat-select [(value)]="data.domain">
+                <mat-option>None</mat-option>
+                <mat-option value="Bâtiment">Bâtiment</mat-option>
+                <mat-option value="Industrie">Industrie</mat-option>
+                <mat-option value="Aménagement Urbain">Aménagement Urbain</mat-option>
+                <mat-option value="Transport">Transport</mat-option>
+                <mat-option value="Eau">Environnement</mat-option>
+                <mat-option value="Transport">Transport</mat-option>
+                <mat-option value="Environnement">Environnement</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+</div>

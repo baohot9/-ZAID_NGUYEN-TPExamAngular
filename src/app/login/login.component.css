@@ -1,0 +1,8 @@
+.table-custom {
+    display: inline-block;
+    width: 500px;
+}
+
+.mat-custom {
+  width: 100%!important;
+}
