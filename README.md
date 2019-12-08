@@ -17,16 +17,20 @@ npm install
 npm start
 
 To log in with Admin role: 
+
 username: admin
 password: admin
 
 To log in with Chef du projet role: 
+
 username: chef
 password: chef
 
 To log in with Salarie role: 
+
 username: salarie1
 password: salarie1
 or
 username: salarie2
 password: salarie2
+
