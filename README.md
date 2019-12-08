@@ -3,8 +3,10 @@
 Notre rendu du TP Angular d'AA
 
 El Mehdi ZAID
+
 Ngoc Bao Trang NGUYEN
 
+=======================================================================================
 
 Get started
 
@@ -12,6 +14,7 @@ Clone the repo
 
 git clone https://github.com/baohot9/-ZAID_NGUYEN-TPExamAngular
 
+=======================================================================================
 
 Install npm packages
 
@@ -21,7 +24,7 @@ npm install
 
 npm start
 
-
+=======================================================================================
 
 To log in with Admin role: 
 
